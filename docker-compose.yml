@@ -4,7 +4,7 @@ services:
 
     web:
         build: ./
-        image: wfsilva/swarm-flask-app:v1
+        image: wfsilva/swarm-flask-app:v2
         ports: 
             - "80"
     redis:
