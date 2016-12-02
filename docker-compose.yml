@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+    web:
+        build: ./
+        image: wfsilva/swarm-flask-app:v1
+        ports: 
+            - "80"
+    redis:
+        image: redis
+        container_name: cache
+        ports:
+            - "6379:6379"
+        command: ["redis-server", "--appendonly", "yes"]
